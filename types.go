@@ -4,8 +4,6 @@ import (
 	"encoding/json"
 )
 
-/// Response Related
-
 // Turn JSON into a response
 func UnmarshalResponse(data []byte) (Response, error) {
 	var r Response
@@ -39,34 +37,36 @@ type Payload struct {
 	DateCreated *string `json:"dateCreated,omitempty"`// The date & time of which the document was created
 	Extension   *string `json:"extension,omitempty"`  // The file extension of the document
 	ID          *string `json:"id,omitempty"`         // The document ID
-	Exists      *bool   `json:"exists,omitempty"`     // If the document exists or not.
+	Exists      *bool   `json:"exists,omitempty"`     // If the document exists or not
 }
 
+// Represents the Spacebin API Client
 type Client struct {
-	Host string
+	Host string // The host that the client is connecting to.
 }
 
 // Information needed to create a document
 type CreateDocumentOpts struct {
-	Content   string `json:"content"`
-	Extension string `json:"extension"`
+	Content   string `json:"content"` 	// The content of the document
+	Extension string `json:"extension"` // The file extension of the document
 }
 
+// Turn a CreateDocumentOpts into JSON
 func (r *CreateDocumentOpts) Marshal() ([]byte, error) {
 	return json.Marshal(r)
 }
 
 // Returned when POSTing a document
 type HashDocument struct {
-	ID 			string
-	ContentHash string
-	Extension 	string
+	ID 			string // The document ID
+	ContentHash string // The hash of the document content
+	Extension 	string // The file extension of the document
 }
 
 // Returned when GETting a document
 type Document struct {
-	ID 			string
-	Content 	string
-	Extension 	string
-	DateCreated string
+	ID 			string // The document ID
+	Content 	string // The document content
+	Extension 	string // The file extension of the document
+	DateCreated string // The date & time of which the document was created
 }
