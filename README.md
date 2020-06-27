@@ -17,7 +17,7 @@ Then construct a new spacebin client that can be used to access the API
 ```go
 spacebin := gospacebin.NewClient("https://api.spaceb.in")
 ```
-For more information on using the client read the [documentation](docs).
+For more information on using the client read the [documentation][docs].
 ## Licensing
 
 This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
