@@ -1,7 +1,7 @@
 <h1 align="center">gospacebin</h1>
 <p align="center"><i>Made with :heart: by <a href="https://github.com/GreatGodApollo">@GreatGodApollo</a></i></p>
 
-Spacebin GoLang API library
+[Spacebin](https://spaceb.in) GoLang API library
 
 ## Built With
 - [net/http](https://golang.org/pkg/net/http/)
