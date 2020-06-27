@@ -52,8 +52,8 @@ type CreateDocumentOpts struct {
 }
 
 // Turn a CreateDocumentOpts into JSON
-func (r *CreateDocumentOpts) Marshal() ([]byte, error) {
-	return json.Marshal(r)
+func (opts *CreateDocumentOpts) Marshal() ([]byte, error) {
+	return json.Marshal(opts)
 }
 
 // Returned when POSTing a document

@@ -12,14 +12,14 @@ func NewCreateDocumentOpts(content string) *CreateDocumentOpts {
 
 // SetExtension sets the content for the *CreateDocumentOpts.
 // It returns the *CreateDocumentOpts
-func (cdo *CreateDocumentOpts) SetContent(content string) *CreateDocumentOpts {
-	cdo.Content = content
+func (opts *CreateDocumentOpts) SetContent(content string) *CreateDocumentOpts {
+	opts.Content = content
 	return cdo
 }
 
 // SetExtension sets the extension for the *CreateDocumentOpts.
 // It returns the *CreateDocumentOpts.
-func (cdo *CreateDocumentOpts) SetExtension(extension string) *CreateDocumentOpts {
-	cdo.Extension = extension
-	return cdo
+func (opts *CreateDocumentOpts) SetExtension(extension string) *CreateDocumentOpts {
+	opts.Extension = extension
+	return opts
 }
