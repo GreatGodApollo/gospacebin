@@ -1,3 +1,3 @@
-module github.com/GreatGodApollo/spacebin-go
+module github.com/GreatGodApollo/gospacebin
 
 go 1.14
