@@ -4,11 +4,18 @@
 Spacebin GoLang API library
 
 ## Built With
-> Used technologies here
+- [net/http](https://golang.org/pkg/net/http/)
 
 ## Usage
-> How to use this software
-
+Import the package into your project
+```go
+import "github.com/GreatGodApollo/gospacebin"
+```
+Then construct a new spacebin client that can be used to access the API
+```go
+spacebin := gospacebin.NewClient("https://api.spaceb.in")
+```
+For more information on using the client read the [documentation](https://pkg.go.dev/github.com/GreatGodApollo/gospacebin).
 ## Licensing
 
 This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
