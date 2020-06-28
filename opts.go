@@ -14,7 +14,7 @@ func NewCreateDocumentOpts(content string) *CreateDocumentOpts {
 // It returns the *CreateDocumentOpts
 func (opts *CreateDocumentOpts) SetContent(content string) *CreateDocumentOpts {
 	opts.Content = content
-	return cdo
+	return opts
 }
 
 // SetExtension sets the extension for the *CreateDocumentOpts.
