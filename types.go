@@ -18,16 +18,9 @@ func (r *Response) Marshal() ([]byte, error) {
 
 // A Spacebin API response
 type Response struct {
-	Error   Error   `json:"error"`   // The error, if one occured
+	Error   string  `json:"error"`   // The error, if one occured
 	Payload Payload `json:"payload"` // The main body of the response
 	Status  int64   `json:"status"`  // The status code of the response
-}
-
-// The error, if one occured
-type Error struct {
-	FileName   *string `json:"fileName,omitempty"`  // The file it occurred in
-	LineNumber *int64  `json:"lineNumber,omitempty"`// The line it occurred on
-	Message    *string `json:"message,omitempty"`   // The error message
 }
 
 // The main body of the response

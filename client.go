@@ -29,7 +29,6 @@ func (cli *Client) makeRequest(req *http.Request) (*Response, error) {
 	}
 	resp, err := UnmarshalResponse(body)
 	if err != nil {
-		fmt.Println(string(body))
 		return nil, fmt.Errorf("%s", "an unexpected response was received")
 	}
 	resp.Status = int64(httpResp.StatusCode)
@@ -54,7 +53,7 @@ func (cli *Client) CreateDocument(opts *CreateDocumentOpts) (*HashDocument, erro
 		return nil, err
 	}
 	if resp.Status != 201 {
-		return nil, fmt.Errorf("%s", resp.Error.Message)
+		return nil, fmt.Errorf("%s", resp.Error)
 	}
 	return &HashDocument{
 		ID:          *resp.Payload.ID,
@@ -80,7 +79,7 @@ func (cli *Client) GetDocument(docID string) (*Document, error) {
 		if resp.Status == 404 {
 			return nil, fmt.Errorf("%s", "document not found")
 		} else {
-			return nil, fmt.Errorf("%s", resp.Error.Message)
+			return nil, fmt.Errorf("%s", resp.Error)
 		}
 	}
 	return &Document{
@@ -104,7 +103,7 @@ func (cli *Client) DocumentExists(docID string) (bool, error) {
 		return false, err
 	}
 	if resp.Status != 200 && resp.Status != 404 {
-		return false, fmt.Errorf("%s", resp.Error.Message)
+		return false, fmt.Errorf("%s", resp.Error)
 	}
 	return *resp.Payload.Exists, nil
 }
