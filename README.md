@@ -1,7 +1,7 @@
 <h1 align="center">gospacebin</h1>
 <p align="center"><i>Made with :heart: by <a href="https://github.com/GreatGodApollo">@GreatGodApollo</a></i></p>
 
-[![GoDev](https://img.shields.io/static/v1?label=godev&message=reference&color=00add8)][docs]
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/GreatGodApollo/gospacebin?tab=doc)][docs]
 
 [Spacebin](https://spaceb.in) GoLang API library
 
@@ -26,4 +26,4 @@ This project is licensed under the [MIT License](https://choosealicense.com/lice
 
 * [Brett Bender](https://github.com/GreatGodApollo)
 
-[docs]: https://pkg.go.dev/github.com/GreatGodApollo/gospacebin
+[docs]: https://pkg.go.dev/github.com/GreatGodApollo/gospacebin?tab=doc
