@@ -83,9 +83,10 @@ func (cli *Client) GetDocument(docID string) (*Document, error) {
 		}
 	}
 	return &Document{
-		ID:          *resp.Payload.ID,
-		Content:     *resp.Payload.Content,
-		Extension:   *resp.Payload.Extension,
-		DateCreated: *resp.Payload.DateCreated,
+		ID:        *resp.Payload.ID,
+		Content:   *resp.Payload.Content,
+		Extension: *resp.Payload.Extension,
+		UpdatedAt: *resp.Payload.UpdatedAt,
+		CreatedAt: *resp.Payload.CreatedAt,
 	}, nil
 }

@@ -59,8 +59,9 @@ type HashDocument struct {
 
 // Returned when GETting a document
 type Document struct {
-	ID          string // The document ID
-	Content     string // The document content
-	Extension   string // The file extension of the document
-	DateCreated string // The date & time of which the document was created
+	ID        string // The document ID
+	Content   string // The document content
+	Extension string // The file extension of the document
+	CreatedAt int    // The time the document was created
+	UpdatedAt int    // The time the document was last modified
 }
