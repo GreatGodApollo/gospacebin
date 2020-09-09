@@ -25,14 +25,13 @@ type Response struct {
 
 // The main body of the response
 type Payload struct {
-	Content     *string `json:"content,omitempty"`     // The document content
-	ContentHash *string `json:"contentHash,omitempty"` // The hash of the document content
-	DateCreated *string `json:"dateCreated,omitempty"` // The date & time of which the document was created
-	Extension   *string `json:"extension,omitempty"`   // The file extension of the document
-	ID          *string `json:"id,omitempty"`          // The document ID
-	Exists      *bool   `json:"exists,omitempty"`      // If the document exists or not
-	CreatedAt   *int    `json:"created_at,omitempty"`  // The time the document was created
-	UpdatedAt   *int    `json:"updated_at,omitempty"`  // The time the document was last modified/updated
+	Content     *string `json:"content,omitempty"`      // The document content
+	ContentHash *string `json:"content_hash,omitempty"` // The hash of the document content
+	Extension   *string `json:"extension,omitempty"`    // The file extension of the document
+	ID          *string `json:"id,omitempty"`           // The document ID
+	Exists      *bool   `json:"exists,omitempty"`       // If the document exists or not
+	CreatedAt   *int    `json:"created_at,omitempty"`   // The time the document was created
+	UpdatedAt   *int    `json:"updated_at,omitempty"`   // The time the document was last modified/updated
 }
 
 // Represents the Spacebin API Client
