@@ -29,7 +29,6 @@ type Payload struct {
 	ContentHash *string `json:"content_hash,omitempty"` // The hash of the document content
 	Extension   *string `json:"extension,omitempty"`    // The file extension of the document
 	ID          *string `json:"id,omitempty"`           // The document ID
-	Exists      *bool   `json:"exists,omitempty"`       // If the document exists or not
 	CreatedAt   *int    `json:"created_at,omitempty"`   // The time the document was created
 	UpdatedAt   *int    `json:"updated_at,omitempty"`   // The time the document was last modified/updated
 }
@@ -54,7 +53,6 @@ func (opts *CreateDocumentOpts) Marshal() ([]byte, error) {
 type HashDocument struct {
 	ID          string // The document ID
 	ContentHash string // The hash of the document content
-	Extension   string // The file extension of the document
 }
 
 // Returned when GETting a document

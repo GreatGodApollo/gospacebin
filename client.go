@@ -58,7 +58,6 @@ func (cli *Client) CreateDocument(opts *CreateDocumentOpts) (*HashDocument, erro
 	return &HashDocument{
 		ID:          *resp.Payload.ID,
 		ContentHash: *resp.Payload.ContentHash,
-		Extension:   *resp.Payload.Extension,
 	}, nil
 }
 
