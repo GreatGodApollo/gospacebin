@@ -38,7 +38,7 @@ func (cli *Client) makeRequest(req *http.Request) (*Response, error) {
 // CreateDocument allows you to create a new document on the Spacebin. The only parameter is a *CreateDocumentOpts.
 // The return value of this method is a *HashDocument.
 func (cli *Client) CreateDocument(opts *CreateDocumentOpts) (*HashDocument, error) {
-	url := fmt.Sprintf("%s/api/v1/documents/", cli.Host)
+	url := fmt.Sprintf("%s/api/v1/documents", cli.Host)
 	j, err := opts.Marshal()
 	if err != nil {
 		return nil, err
