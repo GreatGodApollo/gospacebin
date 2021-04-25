@@ -10,7 +10,7 @@ func NewCreateDocumentOpts(content string) *CreateDocumentOpts {
 	}
 }
 
-// SetExtension sets the content for the *CreateDocumentOpts.
+// SetContent sets the content for the *CreateDocumentOpts.
 // It returns the *CreateDocumentOpts
 func (opts *CreateDocumentOpts) SetContent(content string) *CreateDocumentOpts {
 	opts.Content = content
