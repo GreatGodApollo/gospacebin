@@ -6,7 +6,7 @@ package gospacebin
 func NewCreateDocumentOpts(content string) *CreateDocumentOpts {
 	return &CreateDocumentOpts{
 		Content:   content,
-		Extension: "txt",
+		Extension: "none",
 	}
 }
 
